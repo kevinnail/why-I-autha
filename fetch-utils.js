@@ -7,7 +7,7 @@ const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 export function getUser() {
     // > Part A: supabase get user
-    return client.auth.user.user();
+    return client.auth.user();
 }
 
 export async function signUpUser(email, password) {
@@ -20,7 +20,7 @@ export async function signUpUser(email, password) {
 
 export async function signInUser(email, password) {
     // > Part A: supabase signin
-    return await client.auth.SignIn({
+    return await client.auth.signIn({
         email,
         password,
     });
@@ -28,5 +28,5 @@ export async function signInUser(email, password) {
 
 export async function signOutUser() {
     // > Part B: supabase signout
-    return await client.auth.SignOut();
+    return await client.auth.signOut();
 }
