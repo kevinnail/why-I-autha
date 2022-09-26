@@ -9,7 +9,6 @@ const user = getUser();
 //     - check if there is not a user and if so do the redirect
 //       redirect code: location.replace(`/auth/?redirectUrl=${encodeURIComponent(location)}`);
 if (!user) {
-    console.log(user);
     location.replace(`/auth/?redirectUrl=${encodeURIComponent(location)}`);
 }
 
